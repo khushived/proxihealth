@@ -39,12 +39,4 @@ c. Go to your browser and type 127.0.0.1:5000/ as URL and click enter.
 
 d. You can now see the webpage and access the statistics.
 
-## Purpose
 
-The project 'Detecting Disease Outbreak' has been created as a mini project for the course IT254- Web Technologies and Applications.
-
-## Contributors
-
-- Pratham Nayak (191IT241)
-- Aprameya Dash (191IT209)
-- Suyash Chintawar (191IT109)
