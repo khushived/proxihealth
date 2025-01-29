@@ -48,7 +48,7 @@ def getEmbedMatrix(numToVector):
 def getModel(embed_matrix): 
 
     model = Sequential()
-    model.add(Input(shape=(MAX_LEN)))
+    model.add(Input(shape=(MAX_LEN,)))
     model.add(Embedding(len(embed_matrix),
                         output_dim = VECTOR_DIM,
                         input_length = MAX_LEN,
