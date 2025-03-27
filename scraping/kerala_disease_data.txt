@@ -1,0 +1,272 @@
+Timestamp	Location	Disease	Severity
+2025-03-27 15:54	Ernakulam	Dengue	Low
+2025-03-27 15:54	Malappuram	Dengue	Low
+2025-03-27 15:54	Kerala	Dengue	High
+2025-03-27 15:54	Kerala	Dengue	Moderate
+2025-03-27 15:54	Kerala	Dengue	Low
+2025-03-27 15:54	Kerala	Dengue	High
+2025-03-27 15:54	Kerala	Dengue	Low
+2025-03-27 15:54	Kerala	Dengue	Low
+2025-03-27 15:54	Kerala	Dengue	Moderate
+2025-03-27 15:54	Kerala	Dengue	Low
+2025-03-27 15:54	Kerala	Nipah	Moderate
+2025-03-27 15:54	Kerala	Nipah	Low
+2025-03-27 15:54	Kerala	Nipah	Low
+2025-03-27 15:54	Kerala	Nipah	Low
+2025-03-27 15:54	Kerala	Nipah	Low
+2025-03-27 15:54	Kerala	Nipah	Low
+2025-03-27 15:54	Kerala	Nipah	Moderate
+2025-03-27 15:54	Kerala	Nipah	Moderate
+2025-03-27 15:54	Kerala	Nipah	Low
+2025-03-27 15:54	Kerala	Nipah	High
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Moderate
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	COVID-19	Low
+2025-03-27 15:54	Kerala	Swine Flu	Low
+2025-03-27 15:54	Kerala	Swine Flu	High
+2025-03-27 15:54	Kerala	Swine Flu	High
+2025-03-27 15:54	Kerala	Swine Flu	Low
+2025-03-27 15:54	Kerala	Swine Flu	Low
+2025-03-27 15:54	Kerala	Swine Flu	Low
+2025-03-27 15:54	Kerala	Swine Flu	High
+2025-03-27 15:54	Kottayam	Swine Flu	Moderate
+2025-03-27 15:54	Kerala	Swine Flu	Low
+2025-03-27 15:54	Kerala	Swine Flu	High
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	High
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Cholera	Moderate
+2025-03-27 15:54	Kerala	Malaria	Moderate
+2025-03-27 15:54	Ernakulam	Malaria	Low
+2025-03-27 15:54	Kerala	Malaria	High
+2025-03-27 15:54	Kerala	Malaria	Low
+2025-03-27 15:54	Kerala	Malaria	Moderate
+2025-03-27 15:54	Kerala	Malaria	High
+2025-03-27 15:54	Kerala	Malaria	Low
+2025-03-27 15:54	Kerala	Malaria	Low
+2025-03-27 15:54	Kerala	Malaria	High
+2025-03-27 15:54	Kerala	Malaria	Low
+2025-03-27 15:54	Kerala	Hepatitis	Low
+2025-03-27 15:54	Kerala	Hepatitis	Low
+2025-03-27 15:54	Kerala	Hepatitis	Low
+2025-03-27 15:54	Kerala	Hepatitis	Low
+2025-03-27 15:54	Kerala	Hepatitis	High
+2025-03-27 15:54	Kerala	Hepatitis	Moderate
+2025-03-27 15:54	Kerala	Hepatitis	High
+2025-03-27 15:54	Kerala	Hepatitis	High
+2025-03-27 15:54	Kerala	Hepatitis	Low
+2025-03-27 15:54	Kerala	Hepatitis	Moderate
+2025-03-27 15:54	Kerala	Typhoid	Moderate
+2025-03-27 15:54	Kerala	Typhoid	Low
+2025-03-27 15:54	Kerala	Typhoid	Low
+2025-03-27 15:54	Kerala	Typhoid	Low
+2025-03-27 15:54	Kerala	Typhoid	Moderate
+2025-03-27 15:54	Kerala	Typhoid	Low
+2025-03-27 15:54	Kerala	Typhoid	Low
+2025-03-27 15:54	Ernakulam	Typhoid	Low
+2025-03-27 15:54	Kerala	Typhoid	Low
+2025-03-27 15:54	Kerala	Typhoid	Moderate
+2025-03-27 15:54	Kerala	Leptospirosis	Moderate
+2025-03-27 15:54	Kerala	Leptospirosis	Moderate
+2025-03-27 15:54	Kerala	Leptospirosis	Moderate
+2025-03-27 15:54	Kerala	Leptospirosis	High
+2025-03-27 15:54	Kerala	Leptospirosis	Moderate
+2025-03-27 15:54	Kerala	Leptospirosis	High
+2025-03-27 15:54	Kerala	Leptospirosis	Low
+2025-03-27 15:54	Kerala	Leptospirosis	Moderate
+2025-03-27 15:54	Kerala	Leptospirosis	High
+2025-03-27 15:54	Kerala	Leptospirosis	High
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Moderate
+2025-03-27 15:54	Kerala	Chikungunya	High
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Chikungunya	Low
+2025-03-27 15:54	Kerala	Jaundice	Moderate
+2025-03-27 15:54	Kerala	Jaundice	High
+2025-03-27 15:54	Kerala	Jaundice	Moderate
+2025-03-27 15:54	Kerala	Jaundice	Low
+2025-03-27 15:54	Kerala	Jaundice	Low
+2025-03-27 15:54	Kerala	Jaundice	Moderate
+2025-03-27 15:54	Malappuram	Jaundice	Low
+2025-03-27 15:54	Kerala	Jaundice	Moderate
+2025-03-27 15:54	Kerala	Jaundice	High
+2025-03-27 15:54	Kozhikode	Jaundice	Moderate
+2025-03-27 15:54	Kerala	Conjunctivitis	Low
+2025-03-27 15:54	Kerala	Conjunctivitis	Low
+2025-03-27 15:54	Kerala	Conjunctivitis	Moderate
+2025-03-27 15:54	Kerala	Conjunctivitis	Low
+2025-03-27 15:54	Kerala	Conjunctivitis	Low
+2025-03-27 15:54	Kerala	Conjunctivitis	High
+2025-03-27 15:54	Kerala	Conjunctivitis	Low
+2025-03-27 15:54	Kerala	Conjunctivitis	Moderate
+2025-03-27 15:54	Kerala	Conjunctivitis	Moderate
+2025-03-27 15:54	Kerala	Conjunctivitis	Low
+2025-03-27 15:54	Kochi	Food Poisoning	Moderate
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	Food Poisoning	High
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	Food Poisoning	Moderate
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	Food Poisoning	Low
+2025-03-27 15:54	Kerala	H1N1	High
+2025-03-27 15:54	Kerala	H1N1	Low
+2025-03-27 15:54	Kerala	H1N1	High
+2025-03-27 15:54	Kerala	H1N1	Low
+2025-03-27 15:54	Kerala	H1N1	High
+2025-03-27 15:54	Kerala	H1N1	Moderate
+2025-03-27 15:54	Kerala	H1N1	Low
+2025-03-27 15:54	Kerala	H1N1	High
+2025-03-27 15:54	Kottayam	H1N1	Moderate
+2025-03-27 15:54	Thrissur	H1N1	Moderate
+2025-03-27 15:54	Kerala	Tuberculosis	Moderate
+2025-03-27 15:54	Kerala	Tuberculosis	Moderate
+2025-03-27 15:54	Kerala	Tuberculosis	Low
+2025-03-27 15:54	Kerala	Tuberculosis	Low
+2025-03-27 15:54	Kerala	Tuberculosis	Moderate
+2025-03-27 15:54	Kerala	Tuberculosis	Low
+2025-03-27 15:54	Kerala	Tuberculosis	Low
+2025-03-27 15:54	Kerala	Tuberculosis	Low
+2025-03-27 15:54	Kerala	Tuberculosis	Low
+2025-03-27 15:54	Kerala	Tuberculosis	Moderate
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Moderate
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Moderate
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Pneumonia	Low
+2025-03-27 15:54	Kerala	Skin Infection	Moderate
+2025-03-27 15:54	Kerala	Skin Infection	Moderate
+2025-03-27 15:54	Kerala	Skin Infection	Low
+2025-03-27 15:54	Kerala	Skin Infection	Moderate
+2025-03-27 15:54	Malappuram	Skin Infection	Low
+2025-03-27 15:54	Kerala	Skin Infection	Low
+2025-03-27 15:54	Kerala	Skin Infection	Low
+2025-03-27 15:54	Kerala	Skin Infection	High
+2025-03-27 15:54	Kerala	Skin Infection	Low
+2025-03-27 15:54	Kerala	Skin Infection	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Alappuzha	Asthma	Moderate
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Asthma	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Moderate
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Moderate
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Moderate
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Fungal Infection	Low
+2025-03-27 15:54	Kerala	Diarrhea	Moderate
+2025-03-27 15:54	Kochi	Diarrhea	Moderate
+2025-03-27 15:54	Kochi	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Diarrhea	Low
+2025-03-27 15:54	Ernakulam	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Diarrhea	Moderate
+2025-03-27 15:54	Kerala	Common Cold	Moderate
+2025-03-27 15:54	Kerala	Common Cold	Moderate
+2025-03-27 15:54	Kerala	Common Cold	Low
+2025-03-27 15:54	Kerala	Common Cold	Low
+2025-03-27 15:54	Kerala	Common Cold	High
+2025-03-27 15:54	Kerala	Common Cold	Low
+2025-03-27 15:54	Kerala	Common Cold	Moderate
+2025-03-27 15:54	Kerala	Common Cold	Low
+2025-03-27 15:54	Kerala	Common Cold	Moderate
+2025-03-27 15:54	Kerala	Common Cold	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Thiruvananthapuram	Cough	Moderate
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Cough	Low
+2025-03-27 15:54	Kerala	Fever	Low
+2025-03-27 15:54	Kottayam	Fever	Moderate
+2025-03-27 15:54	Kerala	Fever	Low
+2025-03-27 15:54	Kerala	Fever	Moderate
+2025-03-27 15:54	Kerala	Fever	Low
+2025-03-27 15:54	Kerala	Fever	Moderate
+2025-03-27 15:54	Thrissur	Fever	Moderate
+2025-03-27 15:54	Kerala	Fever	Low
+2025-03-27 15:54	Thrissur	Fever	Moderate
+2025-03-27 15:54	Kerala	Fever	Moderate
+2025-03-27 15:54	Kerala	Stomach Infection	Moderate
+2025-03-27 15:54	Kerala	Stomach Infection	High
+2025-03-27 15:54	Kerala	Stomach Infection	Low
+2025-03-27 15:54	Ernakulam	Stomach Infection	Moderate
+2025-03-27 15:54	Malappuram	Stomach Infection	Moderate
+2025-03-27 15:54	Kerala	Stomach Infection	Moderate
+2025-03-27 15:54	Kerala	Stomach Infection	Low
+2025-03-27 15:54	Kerala	Stomach Infection	Low
+2025-03-27 15:54	Kerala	Stomach Infection	Low
+2025-03-27 15:54	Kerala	Stomach Infection	Low
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:54	Kottayam	Viral Fever	Moderate
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:54	Kerala	Viral Fever	High
+2025-03-27 15:54	Kerala	Viral Fever	Moderate
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:54	Kerala	Viral Fever	Low
+2025-03-27 15:55	Kochi	Dysentery	Moderate
+2025-03-27 15:55	Kochi	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Dysentery	Low
+2025-03-27 15:55	Kerala	Dysentery	Low
+2025-03-27 15:55	Kerala	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Dysentery	Moderate
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Allergy	Low
+2025-03-27 15:55	Kerala	Sinusitis	Moderate
+2025-03-27 15:55	Kerala	Sinusitis	Low
+2025-03-27 15:55	Ernakulam	Sinusitis	Low
+2025-03-27 15:55	Kerala	Sinusitis	Low

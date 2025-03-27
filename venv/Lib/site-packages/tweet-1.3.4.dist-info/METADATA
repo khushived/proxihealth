@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: tweet
+Version: 1.3.4
+Summary: Tweet Only Library
+Home-page: https://github.com/Ganariya/tweet
+Author: ganariya
+Author-email: ganariya2525@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: python-dotenv (>=0.15.0,<0.16.0)
+Requires-Dist: python-twitter (>=3.5,<4.0)
+Requires-Dist: rich (>=10.2.2,<11.0.0)
+Requires-Dist: typer[all] (>=0.3.2,<0.4.0)
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <img width="200" src="static/logo.png">
+</p>
+
+---
+
+`tweet` can tweet your current status from CLI easily.
+
+`tweet` cat tweet `only`, therefore you will not be distracted.
+
+## How to Install
+
+[pipx](https://github.com/pypa/pipx) is good for running python applications in isolated environments.
+
+```
+pipx install tweet
+```
+
+## How to Use
+
+```
+# Post Tweet
+tweet tweet `your-status`
+
+# Endless Mode
+tweet endless
+```
+
+## How to set up
+
+You have to set up `~/.twitter-env` file to your home directory yourself.
+You get tokens from [Twitter Developer](https://developer.twitter.com/en/portal/projects-and-apps).
+
+`~/.twitter-env`
+
+```env
+CONSUMER_TOKEN=.......
+CONSUMER_SECRET=.......
+ACCESS_TOKEN=.......
+ACCESS_SECRET=.....
+```
+

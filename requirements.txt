@@ -1,0 +1,7 @@
+flask
+authlib
+snscrape
+schedule
+scikit-learn
+pandas
+numpy
