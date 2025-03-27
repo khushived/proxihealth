@@ -1,3 +1,5 @@
+//Login.jsx
+
 import { useState } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
@@ -26,10 +28,10 @@ const Login = () => {
       console.log("Server Response:", res.data);
 
       if (res.status === 200 && res.data.user) {
-        localStorage.clear();
         localStorage.setItem("user", JSON.stringify(res.data.user));
+        console.log("User stored in localStorage:", localStorage.getItem("user"));
         alert("Login successful!");
-        navigate("/profile");
+        navigate("/profile"); // ✅ Redirect to Profile
       } else {
         setError("Unexpected response format from server.");
       }
@@ -55,16 +57,16 @@ const Login = () => {
         { token: response.credential },
         {
           withCredentials: true,
-          headers: { Authorization: `Bearer ${response.credential}` },
+          headers: { Authorization: `Bearer ${response.credential}` }
         }
       );
 
       console.log("Google Login Response:", res.data);
 
       if (res.status === 200 && res.data.user) {
-        localStorage.clear();
         localStorage.setItem("user", JSON.stringify(res.data.user));
-        navigate("/profile");
+        console.log("User stored in localStorage:", localStorage.getItem("user"));
+        navigate("/profile"); // ✅ Redirect to Profile
       } else {
         setError("Unexpected response format from Google authentication.");
       }

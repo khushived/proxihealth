@@ -3,6 +3,8 @@ import psycopg2
 import joblib
 import numpy as np
 import pandas as pd
+import schedule
+import time
 from sklearn.preprocessing import LabelEncoder
 
 # Define Base Directory
@@ -154,7 +156,7 @@ def predict_disease(user_id):
     return predicted_disease
 
 # Run Prediction for All Users
-if __name__ == "__main__":
+def run_predictions():
     user_ids = get_all_user_ids()
     results = {}
 
@@ -167,3 +169,14 @@ if __name__ == "__main__":
 
         print("\n✅ All predictions completed!")
         print(results)
+
+# ✅ Schedule the script to run every 2 hours
+schedule.every(2).hours.do(run_predictions)
+
+# ✅ Run immediately before scheduling
+run_predictions()
+
+print("⏳ Waiting for next scheduled run...\n")
+while True:
+    schedule.run_pending()
+    time.sleep(60)  # Check every minute

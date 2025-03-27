@@ -1,3 +1,5 @@
+//App.jsx
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { useState, useEffect } from "react";
@@ -13,38 +15,39 @@ import ProfileD from "./pages/ProfileD";
 const GOOGLE_CLIENT_ID = "912326922512-ub72jl05a0g7t9gtbv6jjqdj6gjof36s.apps.googleusercontent.com";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("user"));
-  const [isDoctorAuthenticated, setIsDoctorAuthenticated] = useState(!!localStorage.getItem("doctor"));
+  const [authStatus, setAuthStatus] = useState({
+    user: JSON.parse(localStorage.getItem("user")) || null,
+    doctor: JSON.parse(localStorage.getItem("doctor")) || null,
+  });
 
+  // ✅ Periodically check localStorage changes every second
   useEffect(() => {
-    console.log("🔍 Checking authentication status...");
-    
-    // ✅ Function to update authentication status dynamically
-    const handleAuthChange = () => {
-      setIsAuthenticated(!!localStorage.getItem("user"));
-      setIsDoctorAuthenticated(!!localStorage.getItem("doctor"));
-    };
+    const interval = setInterval(() => {
+      setAuthStatus({
+        user: JSON.parse(localStorage.getItem("user")) || null,
+        doctor: JSON.parse(localStorage.getItem("doctor")) || null,
+      });
+    }, 1000); // Check every second
 
-    window.addEventListener("storage", handleAuthChange);
-
-    return () => {
-      window.removeEventListener("storage", handleAuthChange);
-    };
+    return () => clearInterval(interval);
   }, []);
+
+  const isAuthenticated = !!authStatus.user;
+  const isDoctorAuthenticated = !!authStatus.doctor;
 
   return (
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/register-doctor" element={<RegisterD />} />
-          <Route path="/login-doctor" element={<LoginD />} />
+          <Route path="/login" element={isAuthenticated ? <Navigate to="/profile" replace /> : <Login />} />
+          <Route path="/register" element={isAuthenticated ? <Navigate to="/profile" replace /> : <Register />} />
+          <Route path="/register-doctor" element={isDoctorAuthenticated ? <Navigate to="/doctor-profile" replace /> : <RegisterD />} />
+          <Route path="/login-doctor" element={isDoctorAuthenticated ? <Navigate to="/doctor-profile" replace /> : <LoginD />} />
 
           {/* ✅ Protected Routes */}
-          <Route path="/profile" element={isAuthenticated ? <Profile /> : <Navigate to="/login" />} />
-          <Route path="/doctor-profile" element={isDoctorAuthenticated ? <ProfileD /> : <Navigate to="/login-doctor" />} />
+          <Route path="/profile" element={isAuthenticated ? <Profile /> : <Navigate to="/login" replace />} />
+          <Route path="/doctor-profile" element={isDoctorAuthenticated ? <ProfileD /> : <Navigate to="/login-doctor" replace />} />
 
           {/* ✅ 404 Page Handling */}
           <Route

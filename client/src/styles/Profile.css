@@ -1,17 +1,21 @@
+//Profile.css
+
 /* Full Page Styling */
 .profile-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    background: linear-gradient(to right, #4facfe, #00f2fe); /* Light blue to dark blue */
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     text-align: center;
     font-family: 'Poppins', sans-serif;
-  }
-  
-  /* Profile Card */
-  .profile-card {
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
     background: rgba(255, 255, 255, 0.3);
     padding: 40px;
     border-radius: 15px;
@@ -22,25 +26,53 @@
     max-width: 450px;
     width: 90%;
     text-align: center;
-  }
-  
-  /* Black Button with White Text */
-  .btn {
+    margin-bottom: 20px;
+}
+
+/* Cards for Additional Sections */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Black Button with White Text */
+.btn {
     padding: 12px 20px;
     font-size: 16px;
     border: none;
-    background-color: black; /* Black Button */
-    color: white; /* White Text */
+    background-color: black;
+    color: white;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s ease;
     width: 100%;
     margin-top: 10px;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: white;
     color: black;
     border: 2px solid black;
-  }
-  
+}
+
+/* Charts Section */
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.chart {
+    width: 45%;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}

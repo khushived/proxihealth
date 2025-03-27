@@ -1,21 +1,24 @@
+//Profile.jsx
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Bar, Pie, Line } from "react-chartjs-2";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, PointElement, LineElement } from "chart.js";
 import "../styles/Profile.css";
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, PointElement, LineElement);
 
 const Profile = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  const [ip, setIp] = useState("");
+  const [ip, setIp] = useState("Fetching...");
   const [editing, setEditing] = useState(false);
   const [newDisease, setNewDisease] = useState("");
   const [diseaseOptions, setDiseaseOptions] = useState([]);
+  const [isSavingIp, setIsSavingIp] = useState(false);
+  const [data, setData] = useState({ diseasePrediction: {}, locationAlerts: [], stats: [] });
 
-  const [accessToken, setAccessToken] = useState(localStorage.getItem("fit_access_token") || "");
-  const [steps, setSteps] = useState(null);
-  const [heartRate, setHeartRate] = useState(null);
-
-  // ✅ Load User Data & Fetch IP
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (!storedUser) {
@@ -36,6 +39,10 @@ const Profile = () => {
       axios.get("http://localhost:5000/chronic-diseases")
         .then((res) => setDiseaseOptions(res.data))
         .catch(() => console.error("Failed to load chronic disease options"));
+
+      fetchProfileData();
+      const interval = setInterval(fetchProfileData, 2 * 60 * 60 * 1000);
+      return () => clearInterval(interval);
     } catch (err) {
       console.error("Error loading user data:", err);
       localStorage.removeItem("user");
@@ -43,7 +50,15 @@ const Profile = () => {
     }
   }, [navigate]);
 
-  // ✅ Save Chronic Disease
+  const fetchProfileData = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/profile-data");
+      setData(res.data);
+    } catch (error) {
+      console.error("Error fetching profile data:", error);
+    }
+  };
+
   const handleSaveDisease = async () => {
     if (!newDisease) {
       alert("Please select a valid chronic disease.");
@@ -51,7 +66,7 @@ const Profile = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/update-chronic-disease", {
+      const response = await axios.put("http://localhost:5000/update-chronic-disease", {
         email: user.email,
         chronic_disease: newDisease,
       });
@@ -68,52 +83,30 @@ const Profile = () => {
     }
   };
 
-  // ✅ Google Fit Authentication
-  const connectGoogleFit = () => {
-    window.location.href = "http://localhost:5000/fit/auth";
-  };
-
-  // ✅ Fetch Steps from Google Fit
-  const fetchSteps = async () => {
-    if (!accessToken) {
-      alert("Please connect to Google Fit first.");
+  const saveIpDetails = async () => {
+    if (!ip || ip === "Error fetching IP") {
+      alert("IP address not available.");
       return;
     }
 
+    setIsSavingIp(true);
     try {
-      const res = await axios.get("http://localhost:5000/fit/steps", {
-        params: { access_token: accessToken },
+      const response = await axios.post("http://localhost:5000/save-ip", {
+        email: user.email,
+        ip_address: ip,
       });
-      setSteps(res.data.steps);
+      if (response.status === 200) alert("IP address saved successfully!");
+      else alert("Error saving IP address.");
     } catch (error) {
-      console.error("Error fetching steps:", error);
-      alert("Failed to fetch steps. Try reconnecting Google Fit.");
+      console.error("Error saving IP details:", error);
+      alert("Failed to save IP details.");
     }
+    setIsSavingIp(false);
   };
 
-  // ✅ Fetch Heart Rate from Google Fit
-  const fetchHeartRate = async () => {
-    if (!accessToken) {
-      alert("Please connect to Google Fit first.");
-      return;
-    }
-
-    try {
-      const res = await axios.get("http://localhost:5000/fit/heartrate", {
-        params: { access_token: accessToken },
-      });
-      setHeartRate(res.data.heartRate);
-    } catch (error) {
-      console.error("Error fetching heart rate:", error);
-      alert("Failed to fetch heart rate. Try reconnecting Google Fit.");
-    }
-  };
-
-  // ✅ Logout
   const handleLogout = () => {
     localStorage.removeItem("user");
-    localStorage.removeItem("fit_access_token");
-    navigate("/");
+    navigate("/login");
   };
 
   return (
@@ -123,46 +116,50 @@ const Profile = () => {
         {user ? (
           <>
             <p><strong>Name:</strong> {user.name}</p>
+            <p><strong>Email:</strong> {user.email}</p>
             <p><strong>Age:</strong> {user.age}</p>
             <p><strong>Gender:</strong> {user.gender}</p>
-            <p><strong>Chronic Disease:</strong> {user.chronic_disease}</p>
+            <p><strong>IP Address:</strong> {ip}</p>
 
             {editing ? (
               <>
-                <select
-                  value={newDisease}
-                  onChange={(e) => setNewDisease(e.target.value)}
-                  className="input-field"
-                >
+                <label>Chronic Disease:</label>
+                <select value={newDisease} onChange={(e) => setNewDisease(e.target.value)} className="input-field">
                   <option value="">Select Chronic Disease</option>
-                  {diseaseOptions.map((disease, index) => (
-                    <option key={index} value={disease}>{disease}</option>
-                  ))}
+                  {diseaseOptions.map((disease, index) => <option key={index} value={disease}>{disease}</option>)}
                 </select>
                 <button className="btn" onClick={handleSaveDisease}>Save</button>
                 <button className="btn cancel-btn" onClick={() => setEditing(false)}>Cancel</button>
               </>
             ) : (
-              <button className="btn" onClick={() => setEditing(true)}>Edit Chronic Disease</button>
+              <>
+                <p><strong>Chronic Disease:</strong> {user.chronic_disease || "Not provided"}</p>
+                <button className="btn" onClick={() => setEditing(true)}>Edit Chronic Disease</button>
+              </>
             )}
-
-            <p><strong>Current IP:</strong> {ip || "Fetching..."}</p>
-
-            {/* ✅ Google Fit Section */}
-            <div className="google-fit">
-              <h3>Google Fit Integration</h3>
-              <button className="btn google-fit-btn" onClick={connectGoogleFit}>Connect Google Fit</button>
-              <button className="btn" onClick={fetchSteps}>Fetch Steps</button>
-              <button className="btn" onClick={fetchHeartRate}>Fetch Heart Rate</button>
-              <p><strong>Steps:</strong> {steps !== null ? steps : "N/A"}</p>
-              <p><strong>Heart Rate:</strong> {heartRate !== null ? heartRate : "N/A"}</p>
-            </div>
-
+            <button className="btn save-ip-btn" onClick={saveIpDetails} disabled={isSavingIp}>{isSavingIp ? "Saving..." : "Save IP Address"}</button>
             <button className="btn logout-btn" onClick={handleLogout}>Logout</button>
           </>
-        ) : (
-          <p>Loading profile...</p>
-        )}
+        ) : <p>Loading profile...</p>}
+      </div>
+
+      <h1>Health Dashboard</h1>
+      <div className="card">
+        <h2>Disease Prediction</h2>
+        <p><strong>Predicted Condition:</strong> {data.diseasePrediction.condition || "Loading..."}</p>
+        <p><strong>Risk Level:</strong> {data.diseasePrediction.risk || "Loading..."}</p>
+      </div>
+      <div className="card">
+        <h2>Location Alerts</h2>
+        <ul>
+          {data.locationAlerts.length > 0 ? data.locationAlerts.map((alert, index) => <li key={index}>{alert}</li>) : <p>No alerts in your area.</p>}
+        </ul>
+      </div>
+      <div className="charts">
+        <h2>Health Data Insights</h2>
+        <Bar data={{ labels: data.stats.map(d => d.date), datasets: [{ label: "Steps", data: data.stats.map(d => d.steps), backgroundColor: "rgba(75,192,192,0.6)" }] }} options={{ responsive: true }} />
+        <Pie data={{ labels: ["Resting", "Fat Burn", "Cardio", "Peak"], datasets: [{ data: [30, 25, 25, 20], backgroundColor: ["blue", "green", "orange", "red"] }] }} />
+        <Line data={{ labels: data.stats.map(d => d.date), datasets: [{ label: "Heart Rate (BPM)", data: data.stats.map(d => d.bpm), borderColor: "red", fill: false }] }} options={{ responsive: true }} />
       </div>
     </div>
   );
