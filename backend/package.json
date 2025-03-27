@@ -21,6 +21,7 @@
     "googleapis": "^148.0.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.14.1",
+    "pg-pool": "^3.8.0",
     "querystring": "^0.2.1"
   }
 }
